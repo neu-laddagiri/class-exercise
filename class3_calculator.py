@@ -2,6 +2,8 @@
 import argparse
 
 def add(a, b):
+    def subtract(a, b):
+    return a - b
     return a + b
 
 
@@ -19,6 +21,8 @@ def main():
 
     if args.operation == "add":
         result = add(args.a, args.b)
+    elif args.operation == "subtract":
+        result = subtract(args.a, args.b)
 
     print(f"Result: {result}")
 
