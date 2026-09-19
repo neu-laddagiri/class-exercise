@@ -1,12 +1,17 @@
 # class3_calculator.py
 import argparse
 
+
 def add(a, b):
-    def subtract(a, b):
-        def multiply(a, b):
-    return a * b
-    return a - b
     return a + b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
 
 
 def main():
