@@ -3,6 +3,8 @@ import argparse
 
 def add(a, b):
     def subtract(a, b):
+        def multiply(a, b):
+    return a * b
     return a - b
     return a + b
 
@@ -13,7 +15,7 @@ def main():
     parser.add_argument("--b", "-b", type=float, required=True, help="Second number")
     parser.add_argument(
         "--operation", "-op",
-        choices=["add"],
+        choices=["add", "subtract", "multiply"],
         default="add",
         help="Operation to perform"
     )
@@ -23,6 +25,8 @@ def main():
         result = add(args.a, args.b)
     elif args.operation == "subtract":
         result = subtract(args.a, args.b)
+    elif args.operation == "multiply":
+        result = multiply(args.a, args.b)
 
     print(f"Result: {result}")
 
